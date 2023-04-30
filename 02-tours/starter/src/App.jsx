@@ -1,6 +1,13 @@
+import Loading from "./Loading";
+import Tour from "./Tour";
+
 const url = 'https://course-api.com/react-tours-project';
 
 const App = () => {
-  return <h2>Tours Starter</h2>;
+
+  return <Tour/>
+  // <div>
+  //   Loading component
+  // </div>;
 };
 export default App;
