@@ -1,7 +1,19 @@
-const Tours = ()=>{
-    return <div>
-        Tours component
-    </div>
-}
+import Tour from "./Tour";
 
-export default Tours
+const Tours = (props) => {
+  const listTours = props.listTours;
+
+  return (
+    <>
+      {listTours.map((tour) => {
+        return (
+
+            <Tour tour={tour} handleRemove ={props.handleRemove} key={tour.id}/>
+
+        );
+      })}
+    </>
+  );
+};
+
+export default Tours;

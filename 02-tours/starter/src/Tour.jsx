@@ -1,17 +1,23 @@
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-const Tour = ()=>{
+
+const Tour = (props)=>{
+  const {id, name , info, image, price} = props.tour
+  const [readMore ,setReadMore] = useState(true);
     return (
         <Card style={{ width: '18rem' }}>
-          <Card.Img variant="top" src="https://znews-photo.zingcdn.me/w660/Uploaded/qhj_yvobvhfwbv/2018_07_18/Nguyen_Huy_Binh1.jpg" />
+          <Card.Img variant="top" src={image} />
           <Card.Body>
-            <Card.Title>Card Title</Card.Title>
+            <Card.Title>{name}</Card.Title>
             <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
+              { readMore ? `${info.substring(0,100)}...`  : info}
+              <button className='info-btn' onClick={()=>{setReadMore(!readMore)}}>Read More</button>
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+            <Card.Text>
+              <span style={{ fontWeight: 'bold' }}>{price} $</span>
+            </Card.Text>
+            <Button variant="primary" onClick={()=>{props.handleRemove(id)}}>Don't care</Button>
           </Card.Body>
         </Card>
       );
