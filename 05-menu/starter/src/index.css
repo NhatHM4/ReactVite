@@ -66,8 +66,8 @@ html {
 
 body {
   background: var(--backgroundColor);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   line-height: 1;
   color: var(--textColor);
@@ -127,7 +127,8 @@ ul {
 }
 
 .img {
-  width: 100%;
+  width: 200px;
+  height: 100px;
   display: block;
   object-fit: cover;
 }
@@ -181,6 +182,9 @@ ul {
 /* form */
 
 .form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   width: 90vw;
   max-width: var(--fixed-width);
   background: var(--white);
