@@ -13,6 +13,7 @@ const App = () => {
   }, []);
 
   const fecthData = async () => {
+    await new Promise(resolve => setTimeout(resolve, 3000)); // wait for 3 seconds
     try {
       const res = await fetch(url);
       if (!res.ok) {
@@ -23,13 +24,15 @@ const App = () => {
     } catch (error) {
       console.log(error);
     }
-    setIsLoading(true);
+    setIsLoading(false);
   };
 
   const handleCLick=(index) =>{
     setCompanyNumber(index)
   }
-
+  if (isLoading){
+    return <div className="loading"></div>
+  }
   return (
     <div className="container jobs-center">
       <div className="column1">
