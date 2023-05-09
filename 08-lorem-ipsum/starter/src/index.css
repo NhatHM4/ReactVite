@@ -293,3 +293,10 @@ ul {
   line-height: 2;
   margin-bottom: 2rem;
 }
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+    
+    -webkit-appearance: "Always Show Up/Down Arrows";
+    
+}
