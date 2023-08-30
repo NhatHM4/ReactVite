@@ -278,6 +278,7 @@ form h4 {
   grid-template-columns: 1fr 100px;
 }
 .form-input {
+  width: 70% !important;
   border-radius: 0;
   border-top-left-radius: var(--borderRadius);
   border-bottom-left-radius: var(--borderRadius);
@@ -311,4 +312,7 @@ form h4 {
 
 .Toastify__toast {
   text-transform: capitalize;
+}
+.testclass {
+  text-decoration:line-through;
 }
